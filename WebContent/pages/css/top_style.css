@@ -1,0 +1,117 @@
+@import "font.css";
+/**
+body{
+  Font-size:10%;
+}
+**/
+
+.top{
+  z-index:1;
+  background:url("../image/1403070516.png") center no-repeat;
+  /** background-size:100% 1000px; **/
+  background-size:100% 100%;
+  background-position:50% 0%;
+  width:100%;
+  height:1000px;
+}
+
+.blackPurdah{
+  z-index:2;
+  background:#000000;
+  width:100%;
+  height:100%;
+  opacity:0.3;
+}
+
+.name{
+  position: absolute;
+  z-index: 3;
+  color: #FF9900;
+  width: 600px;
+  font-size: 64px;
+  height: 120px;
+  top: 30%;
+  left: 36.5%;
+  font-family:SHSCN-Bold;
+}
+
+.topButton{
+  position: absolute;
+  z-index:3;
+  border-color:#FF9900;
+  border-width:2px;
+  border-radius:28px;
+  border-style:solid;
+  color:#FF9900;
+  width:200px;
+  height:100px;
+  left: 45%;
+  top: 60%;
+  font-size:28px;
+  margin-top: 30px;
+}
+
+.buttonText{
+  font-family:SHSCN-Bold;
+  left: 50px;
+  top: 30px;
+  position: absolute;
+}
+
+.intro1{
+  z-index:1;
+  border-color:#FFFFFF;
+  border-width:2px;
+  width:100%;
+  height:500px;
+  margin-top: 2px;
+  background-color:#CCFF00;
+}
+
+.intro2{
+  z-index:1;
+  border-color:#FFFFFF;
+  border-width:2px;
+  width:100%;
+  height:500px;
+  margin-top: 2px;
+  background-color:#66CCFF;
+}
+
+
+.intro3{
+  z-index:1;
+  border-color:#FFFFFF;
+  border-width:2px;
+  width:100%;
+  height:500px;
+  margin-top: 2px;
+  background-color:#FF9900;
+}
+
+.introText{
+    position: relative;
+    left: 80%;
+    top: 50%;
+    font-size:30px;
+    font-family:SHSCN-Bold;
+}
+
+.pageInfo{
+    position:absolute;
+	width:99%;
+	height:300px;
+	margin-top: 2px;
+	background-color:#CCCCCC;
+}
+
+.floatInfo{
+    z-index:4;
+    position:fixed;
+	top:30%;
+	background:url("../image/wechat.png") center no-repeat;
+    background-size:100% 100%;
+    background-position:50% 0%;
+    width:204px;
+	height:288px;
+}

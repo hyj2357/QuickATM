@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+  <title>登录</title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link href="../css/top_style.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/login_style.css" rel="stylesheet">
+  <script src="../js/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+     function changeButtonStatusMouseOver(){
+         $(".topButton").css("color","#FFFFFF");
+         $(".topButton").css("background-color","#FF9900");
+	 }
+     function changeButtonStatusMouseOut(){
+		 $(".topButton").css("color","#FF9900");
+         $(".topButton").css("background-color","");
+	 }
+  </script>
+  <div class="floatInfo">
+  </div>
+  <div class="top" style="background:url('../image/20140819112344618.jpg') center no-repeat;">
+   <div class="blackPurdah" style="height:15%;position:fixed;">
+   </div>
+   <div style="z-index:4;position:fixed;top:3.5%;width:100%;">
+      <a href="top.htm">
+         <img style="position:relative;top:5%;" src="../image/prev.png"/>
+	  </a>
+	  <a href="top.htm">
+	     <label style="color:rgba(255,255,255,0.6);font-family:SHSCN-Bold;font-size:28px;margin-top:5px">返回主页</label>
+	  </a>
+	  <div style="top: 5px;position: fixed;right: 10%;">
+	     <label style="color: #FF9900;font-family: SHSCN-Bold;font-size: 36px;margin-left: 1000px;margin-top: 15px;">
+	        <strong>Q&A</strong>
+	     </label>
+	  </div>
+   </div>
+   <div class="name" style="top: 20%;left: 48%;">
+	   <strong>Login</strong>
+   </div>
+	
+  <div style="left: 50%;position: absolute;top: 50%;top:40%;">
+    <form>
+	  <div class="inputGroup">
+	     <label>	  
+	        <span class="inputLabel">
+	           <strong>卡号</strong>	  
+	        </span>
+	     </label>&nbsp;&nbsp;&nbsp;
+         <input class="inputTxt" style="border:none" type="text" placeholder="请输入卡号"/><br/><br/><br/>
+	  </div>
+	  <div class="inputGroup">
+	     <label>	  
+	        <span class="inputLabel">
+	           <strong>密码</strong>	  
+	        </span>
+	     </label>&nbsp;&nbsp;&nbsp;
+         <input class="inputTxt" style="border:none" type="password" placeholder="请输入密码"/><br/><br/><br/>
+	  </div>    </form>
+  </div>
+  <br/><br/>
+
+  <div class="topButton" style="left:48%;top:70%;border-width:5px;" align="center" onclick="window.location.href='op.htm'" onmouseout="changeButtonStatusMouseOut()" onmousemove="changeButtonStatusMouseOver()">
+	  <span class="buttonText" style="left:70px">
+	      <strong>确认</strong>	  
+	  </span>
+	</div>
+  </div>
+  <!--
+  <div class="intro3">
+     <label class="introText">
+	   <strong>快捷支付体验</strong>
+	 </label>
+  </div>
+  <div class="intro1">
+     <label class="introText" style="left:10%;">
+	    <strong>安全支付保障</strong>
+	 </label>
+  </div>
+  <div class="intro2">
+     <label class="introText">
+	    <strong>方便支付需求</strong>
+	 </label>
+  </div>
+  -->
+    <div class="pageInfo">
+     <div class="introText" style="left:50%;top:30%">
+	  	<a href="http://www.baidu.com">
+		    <strong>联系我们</strong>
+		</a>
+	 </div>
+     <div class="introText" style="left:42%;">
+	  	<strong>备案信息:XXXXXXXXXXXXX</strong>  
+	 </div>
+  </div>
+</body>
+
+</html>

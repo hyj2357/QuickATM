@@ -1,0 +1,36 @@
+@import "font.css";
+/**
+body{
+  Font-size:10%;
+}
+**/
+
+.inputTxt:focus{
+    transition:border linear .2s,box-shadow linear .5s;
+    -moz-transition:border linear .2s,-moz-box-shadow linear .5s;
+    -webkit-transition:border linear .2s,-webkit-box-shadow linear .5s;
+    outline:none;
+	border-color:rgba(241,39,242,.75);
+    box-shadow:0 0 20px rgba(241,39,232,.5);
+    -moz-box-shadow:0 0 20px rgba(241,39,232,.5);
+    -webkit-box-shadow:0 0 20px rgba(241,39,232,3);
+}
+
+.inputTxt{
+   border:none;
+   width:250px;
+   height:60px;
+   font-size:24px;
+   font-family:SHSCN-Bold;
+   border-radius:10px;
+}
+
+.inputLabel{
+   font-size:24px;
+   font-family:SHSCN-Bold;
+}
+
+.inputGroup{
+    right: 30%;
+    position: relative;
+}

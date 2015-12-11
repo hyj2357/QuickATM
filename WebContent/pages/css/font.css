@@ -1,0 +1,34 @@
+@font-face{
+   font-family: SHSCN-Bold;
+   src:url('../resource/font/SourceHanSansCN-Bold.otf');
+}
+
+@font-face{
+   font-family: SHSCN-ExtraLight;
+   src:url('../resource/font/SourceHanSansCN-ExtraLight.otf');
+}
+
+@font-face{
+   font-family: SHSCN-Heavy;
+   src:url('../resource/font/SourceHanSansCN-Heavy.otf');
+}
+
+@font-face{
+   font-family: SHSCN-Light;
+   src:url('../resource/font/SourceHanSansCN-Light.otf');
+}
+
+@font-face{
+   font-family: SHSCN-Medium;
+   src:url('../resource/font/SourceHanSansCN-Medium.otf');
+}
+
+@font-face{
+   font-family: SHSCN-Normal;
+   src:url('../resource/font/SourceHanSansCN-Normal.otf');
+}
+
+@font-face{
+   font-family: SHSCN-Regular;
+   src:url('../resource/font/SourceHanSansCN-Regular.otf');
+}
