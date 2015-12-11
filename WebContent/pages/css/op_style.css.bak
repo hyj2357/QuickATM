@@ -32,11 +32,11 @@
 .op_border_div{
     border-style: solid;
     background-color:#CCCCCC;
-	border-color:#FFFFFF;
-	border-width:3px;
+	border-color:#FFFFFF #CCCCCC #FFFFFF #CCCCCC;
+	border-width:1px 8px 1px 1px;
 	color:#FF9900;
     width:100%;
     height:10%;
 	font-size: 28px;
-	font-family:SHSCN-Normal;
+	font-family:SHSCN-Bold;
 }

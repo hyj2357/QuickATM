@@ -39,6 +39,7 @@ body{
 }
 
 .topButton{
+  cursor:pointer;
   position: absolute;
   z-index:3;
   border-color:#FF9900;
@@ -55,6 +56,7 @@ body{
 }
 
 .buttonText{
+  cursor:pointer;
   font-family:SHSCN-Bold;
   left: 50px;
   top: 30px;

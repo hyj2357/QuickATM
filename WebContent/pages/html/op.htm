@@ -9,6 +9,7 @@
   <link href="../css/login_style.css" rel="stylesheet">
   <link href="../css/op_style.css" rel="stylesheet">
   <script src="../js/jquery-2.1.4.min.js"></script>
+  <script src="../js/op_js.js"></script>
 </head>
 
 <body>
@@ -26,11 +27,11 @@
    <div class="blackPurdah" style="height:15%;position:fixed;">
    </div>
    <div style="z-index:4;position:fixed;top:3.5%;width:100%;">
-      <a href="top.htm">
-         <img style="position:relative;top:5%;" src="../image/prev.png"/>
+      <a href="login.htm">
+         <img style="cursor:pointer;position:relative;top:5%;" src="../image/prev.png"/>
 	  </a>
 	  <a href="login.htm">
-	     <label style="color:rgba(255,255,255,0.6);font-family:SHSCN-Bold;font-size:28px;margin-top:5px">取卡退出</label>
+	     <label style="cursor:pointer;color:rgba(255,255,255,0.6);font-family:SHSCN-Bold;font-size:28px;margin-top:5px">取卡退出</label>
 	  </a>
 	  <div style="top: 5px;position: fixed;right: 10%;">
 	     <label style="color: #FF9900;font-family: SHSCN-Bold;font-size: 48px;margin-left: 1000px;margin-top: 15px;">
@@ -50,35 +51,35 @@
 	  </span>
    </div>
    <div class="op_border">
-      <div class="op_border_div" style="margin-top:0px;background-color:#FF9900;color:#000000;">
+      <div class="op_border_div" style="border-color:#FF9900 #FF9900 #FFFFFF #FF9900;margin-top:0px;background-color:#FF9900;color:#000000;">
 	     <strong>操作</strong>
 	  </div>
-      <div class="op_border_div">
+      <div class="op_border_div"  onclick="window.location.href='op.htm'" style="background-color:#FFFFFF;border-color:#FFFFFF #FF9900 #FFFFFF #FFFFFF;">
 	    <span>
 	     首页
 		</span>
 	  </div>
-      <div class="op_border_div">
+      <div class="op_border_div"  onclick="window.location.href='op_deposit.htm'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     存款
 		</span>
 	  </div>
-      <div class="op_border_div">
+      <div class="op_border_div"   onclick="window.location.href='op_draw.htm'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     取款
 		</span>
 	  </div>
-      <div class="op_border_div">
+      <div class="op_border_div"  onclick="window.location.href='op_checkBalance.htm'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     查询账户余额
 		</span>
 	  </div>
-      <div class="op_border_div">
+      <div class="op_border_div"  onclick="window.location.href='op_transfer.htm'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	      转账
 		</span>
 	  </div>
-      <div class="op_border_div">
+      <div class="op_border_div"  onclick="window.location.href='op_modifyPassword.htm'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     修改密码
 		</span>
