@@ -55,32 +55,32 @@
 	  </div>
       <div class="op_border_div">
 	    <span>
-	     首页
+	     <strong>首页</strong>
 		</span>
 	  </div>
       <div class="op_border_div">
 	    <span>
-	     存款
+	     <strong>存款</strong>
 		</span>
 	  </div>
       <div class="op_border_div">
 	    <span>
-	     取款
+	     <strong>取款</strong>
 		</span>
 	  </div>
       <div class="op_border_div">
 	    <span>
-	     查询账户余额
+	     <strong>查询账户余额</strong>
 		</span>
 	  </div>
       <div class="op_border_div">
 	    <span>
-	      转账
+	     <strong>转账</strong>
 		</span>
 	  </div>
       <div class="op_border_div">
 	    <span>
-	     修改密码
+	     <strong>修改密码</strong>
 		</span>
 	  </div>
    </div>

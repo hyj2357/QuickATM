@@ -1,0 +1,42 @@
+@import "font.css";
+
+.content{
+    text-align:center;
+    opacity: 0.6;
+    width: 60%;
+    height: 70%;
+    background-color: #FFFFFF;
+    display: inline;
+	font-size: 32px;
+	font-family:SHSCN-Bold;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+.contentText{
+    margin:auto;
+}
+
+.op_border{
+    text-align:center;
+    width:20%;
+    height:70%;
+    position: absolute;
+    top:30%;
+    left:70%;;
+    background-color: #FF9900;
+    display: inline;
+}
+
+.op_border_div{
+    border-style: solid;
+    background-color:#CCCCCC;
+	border-color:#FFFFFF;
+	border-width:3px;
+	color:#FF9900;
+    width:100%;
+    height:10%;
+	font-size: 28px;
+	font-family:SHSCN-Normal;
+}
