@@ -11,7 +11,7 @@
       <id name="id" type="int" length="10"><generator class="identity"/></id>   
       <property name="balance" type="double"/>
       
-      <one-to-one name="maccount" class="Account" column="account" constrained="true"></one-to-one>                              
+      <one-to-one name="maccount" class="Account" constrained="true"></one-to-one>                              
    </class> 
    
    <sql-query name="findById_query">

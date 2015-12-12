@@ -25,7 +25,7 @@
        WHERE lg.d_time BETWEEN ? AND ?;
    </sql-query> 
    
-   <sql-query name="findById_query">
+   <sql-query name="findLogById_query">
        <return-scalar column="id" type="int"/>
        <return-scalar column="content" type="string"/>
        <return-scalar column="d_time" type="java.sql.Timestamp"/>       

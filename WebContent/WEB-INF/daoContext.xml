@@ -8,5 +8,8 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     
-    <!-- 配置Dao层组件  -->        
+    <!-- 配置Dao层组件  --> 
+    <bean id="accountDao" class="com.quickpayatm.dao.impl.AccountDaoImpl" parent="daoConfigTemplate"/>
+    <bean id="balanceDao" class="com.quickpayatm.dao.impl.BalanceDaoImpl" parent="daoConfigTemplate"/>
+    <bean id="logDao" class="com.quickpayatm.dao.impl.LogDaoImpl" parent="daoConfigTemplate"/>           
 </beans>

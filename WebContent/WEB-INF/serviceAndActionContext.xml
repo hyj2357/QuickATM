@@ -8,14 +8,24 @@
 	<bean id="actionContext" class="com.opensymphony.xwork2.ActionContext" factory-method="getContext"/>
 	  	  
     <!-- 配置业务逻辑层组件  -->
-	
+	<bean id="accountService" class="com.quickpayatm.service.impl.AccountServiceImpl">
+	   <property name="accountDao" ref="accountDao"/>
+	   <property name="balanceDao" ref="balanceDao"/>
+	</bean>
 	
 	<!-- 配置action -->
 	
-<!--  actModule -->
-    <!-- 配置 actModule 的 action 配置模板 -->
-	
-
+<!--  atmModule -->
+    <!-- 配置 atmModule 的 action 配置模板 -->
+	<bean id="atmModuleTemplate" abstract="true" scope="prototype">
+        <property name="accountService" ref="accountService"/>
+    </bean>	
+    <bean id="CheckAccountBalance" class="com.quickpayatm.action.atmmodule.CheckAccountBalanceAction"  parent="atmModuleTemplate"/>    	
+    <bean id="DepositToAccount" class="com.quickpayatm.action.atmmodule.DepositToAccountAction"  parent="atmModuleTemplate"/>    	
+    <bean id="DrawFromAccount" class="com.quickpayatm.action.atmmodule.DrawFromAccountAction"  parent="atmModuleTemplate"/>    	
+    <bean id="Login" class="com.quickpayatm.action.atmmodule.LoginAction"  parent="atmModuleTemplate"/>    	
+    <bean id="ModifyPassword" class="com.quickpayatm.action.atmmodule.ModifyPasswordAction"  parent="atmModuleTemplate"/>    	
+    <bean id="TransferAccount" class="com.quickpayatm.action.atmmodule.TransferAccountAction"  parent="atmModuleTemplate"/>    	  
 <!-- 页面转发相关配置 -->
 
     <bean id="pfs" class="com.quickpayatm.action.authority.PageForwardServlet" scope="prototype"/> 

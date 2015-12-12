@@ -15,7 +15,18 @@
     <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
     
     <package name="scuthnweb" extends="struts-default" namespace="/">
-    
+       <action name="CheckAccountBalance" class="CheckAccountBalance">
+       </action>
+       <action name="DepositToAccount" class="DepositToAccount">
+       </action>
+       <action name="DrawFromAccount" class="DrawFromAccount">
+       </action>
+       <action name="Login" class="Login">
+       </action>
+       <action name="ModifyPassword" class="ModifyPassword">
+       </action>
+       <action name="TransferAccount" class="TransferAccount">
+       </action>
 <!-- WEB-INF下界面转发Action -->
        <action name="pfs" class="pfs">
        </action>
