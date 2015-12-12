@@ -1,5 +1,9 @@
 package com.quickpayatm.dao;
 
-public interface BalanceDao {
+import com.quickpayatm.domain.Balance;
 
+public interface BalanceDao {
+    public boolean update(Balance balance);
+    
+    public Balance findById(int id);
 }

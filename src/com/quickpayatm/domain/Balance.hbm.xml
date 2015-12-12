@@ -11,6 +11,15 @@
       <id name="id" type="int" length="10"><generator class="identity"/></id>   
       <property name="balance" type="double"/>
       
-      <one-to-one name="account" class="Account" constrained="true"></one-to-one>                              
-   </class>     
+      <one-to-one name="maccount" class="Account" column="account" constrained="true"></one-to-one>                              
+   </class> 
+   
+   <sql-query name="findById_query">
+       <return-scalar column="id" type="int"/>
+       <return-scalar column="balance" type="double"/>
+       SELECT id,balance
+       FROM balance bl
+       WHERE bl.account=?;
+   </sql-query>
+       
 </hibernate-mapping>

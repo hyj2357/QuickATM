@@ -10,6 +10,7 @@
    <class name="Account" table="account">
       <id name="id" type="int" length="10"><generator class="identity"/></id>   
       <property name="account" type="string"/>
+      <property name="password" type="string"/>
       
       <one-to-one name="balance" class="Balance"/>
       
@@ -17,5 +18,19 @@
             <key column="account"/>
             <one-to-many class="Log"/>
       </set>                              
-   </class>     
+   </class>
+   
+   <sql-query name="findByAccountAndPassword_query">
+       <return-scalar column="account" type="string"/>
+       SELECT account
+       FROM account ac
+       WHERE ac.account=? AND ac.password=?;
+   </sql-query>
+   
+   <sql-query name="findByAccount_query">
+       <return-scalar column="id" type="int"/>
+       SELECT id
+       FROM account ac
+       WHERE ac.account=?;
+   </sql-query>        
 </hibernate-mapping>

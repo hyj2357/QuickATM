@@ -5,6 +5,8 @@ import java.util.Set;
 public class Account {
      private int id;
      private String account;
+     private String password;
+     
      private Set<Log> log;
      private Balance balance;
      
@@ -31,6 +33,12 @@ public class Account {
 	}
 	public void setBalance(Balance balance) {
 		this.balance = balance;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
      
 }

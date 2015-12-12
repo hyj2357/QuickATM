@@ -1,5 +1,5 @@
 package com.quickpayatm.action.atmmodule;
 
-public interface AccountService {
+public class DepositToAccountAction {
 
 }
