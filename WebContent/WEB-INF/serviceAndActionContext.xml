@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+    
+	<!-- 使用静态工厂方法实例化 ActionContext -->
+	<bean id="actionContext" class="com.opensymphony.xwork2.ActionContext" factory-method="getContext"/>
+	  	  
+    <!-- 配置业务逻辑层组件  -->
+	
+	
+	<!-- 配置action -->
+	
+<!--  actModule -->
+    <!-- 配置 actModule 的 action 配置模板 -->
+	
+
+<!-- 页面转发相关配置 -->
+
+    <bean id="pfs" class="com.quickpayatm.action.authority.PageForwardServlet" scope="prototype"/> 
+
+<!-- end 页面转发相关配置 --> 	     
+</beans>

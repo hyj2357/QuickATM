@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!-- 指定Hiberante3映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--上面四行对所有的hibernate映射文件都相同 -->
+
+<!-- hibernate-mapping是映射文件的根元素 -->
+<hibernate-mapping package="com.quickpayatm.domain">
+   <class name="Account" table="account">
+      <id name="id" type="int" length="10"><generator class="identity"/></id>   
+      <property name="account" type="string"/>
+      
+      <one-to-one name="balance" class="Balance"/>
+      
+      <set name="log" inverse="true" cascade="all">
+            <key column="account"/>
+            <one-to-many class="Log"/>
+      </set>                              
+   </class>     
+</hibernate-mapping>
