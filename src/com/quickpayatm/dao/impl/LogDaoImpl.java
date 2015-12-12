@@ -15,8 +15,7 @@ import com.quickpayatm.domain.Log;
 
 public class LogDaoImpl extends HibernateDaoSupport implements LogDao{
 
-	@Override
-	public boolean update(Log log) {
+	public boolean update(final Log log) {
 		this.getHibernateTemplate().execute(
 				new HibernateCallback() {
 
@@ -35,19 +34,16 @@ public class LogDaoImpl extends HibernateDaoSupport implements LogDao{
 		return true;
 	}
 
-	@Override
 	public List<Log> findById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public boolean create(Log log) {
         this.getHibernateTemplate().save(log);
 		return true;
 	}
 
-	@Override
 	public List<Log> findByD_time(Timestamp startTime, Timestamp endTime) {
 		// TODO Auto-generated method stub
 		return null;

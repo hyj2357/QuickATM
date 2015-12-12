@@ -2,6 +2,7 @@ package com.quickpayatm.service.impl;
 
 import com.quickpayatm.dao.AccountDao;
 import com.quickpayatm.dao.BalanceDao;
+import com.quickpayatm.domain.Account;
 import com.quickpayatm.domain.Balance;
 import com.quickpayatm.service.AccountService;
 
@@ -9,7 +10,6 @@ public class AccountServiceImpl implements AccountService{
     private AccountDao accountDao;
     private BalanceDao balanceDao;
     
-	@Override
 	public boolean depositToAccount(String account, String amount) {
 		int id = this.accountDao.findByAccount(account);
 		Balance balance = this.balanceDao.findById(id);
@@ -18,7 +18,6 @@ public class AccountServiceImpl implements AccountService{
 		return true;
 	}
 
-	@Override
 	public boolean drawFromAccount(String account, String amount) {
 		int id = this.accountDao.findByAccount(account);
 		Balance balance = this.balanceDao.findById(id);
@@ -28,28 +27,41 @@ public class AccountServiceImpl implements AccountService{
         return true;
 	}
 
-	@Override
 	public boolean transferAccount(String account, String targetAccount, String amount) {
-		// TODO Auto-generated method stub
-		return false;
+		int i = this.accountDao.findByAccount(account);
+		int j = this.accountDao.findByAccount(targetAccount);
+		if(j==-1)
+			return false;
+		Balance balance = this.balanceDao.findById(i);
+		if(balance.getBalance()<Double.parseDouble(amount))
+			return false;
+		Balance balance_t = this.balanceDao.findById(j);
+		balance.setBalance(balance.getBalance()-Double.parseDouble(amount));
+		balance_t.setBalance(balance_t.getBalance()+Double.parseDouble(amount));
+		return true;
 	}
 
-	@Override
 	public Balance checkAccountBalance(String account) {
-		// TODO Auto-generated method stub
-		return null;
+		int id = this.accountDao.findByAccount(account);
+        Balance balance = this.balanceDao.findById(id);
+		return balance;
 	}
 
-	@Override
 	public boolean modifyPassword(String account, String password, String newPassword, String confirmPassword) {
-		// TODO Auto-generated method stub
-		return false;
+		int id = this.accountDao.findByAccount(account);
+		String account_f = this.accountDao.findByAccountAndPassword(account, confirmPassword);
+		if(account_f==null||(!account_f.equals(account)))
+			return false;
+		Account ac = new Account();
+		ac.setId(id);
+		ac.setAccount(account);
+		ac.setPassword(confirmPassword);
+		this.accountDao.update(ac);			
+		return true;
 	}
 
-	@Override
 	public boolean login(String account, String password) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.accountDao.findByAccountAndPassword(account, password)!=null;
 	}
 
 	public AccountDao getAccountDao() {

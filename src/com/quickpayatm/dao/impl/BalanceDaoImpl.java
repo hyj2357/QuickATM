@@ -14,8 +14,7 @@ import com.quickpayatm.domain.Balance;
 
 public class BalanceDaoImpl   extends HibernateDaoSupport  implements BalanceDao{
 
-	@Override
-	public boolean update(Balance balance) {
+	public boolean update(final Balance balance) {
 		this.getHibernateTemplate().execute(
 				new HibernateCallback() {
 
@@ -34,7 +33,6 @@ public class BalanceDaoImpl   extends HibernateDaoSupport  implements BalanceDao
 		return true;
 	}
 
-	@Override
 	public Balance findById(int id) {
         int i = -1;
         List ls = null;
@@ -44,7 +42,7 @@ public class BalanceDaoImpl   extends HibernateDaoSupport  implements BalanceDao
         Balance bl = new Balance();
         Object[] data = (Object[])(ls.get(0));
         bl.setId(((Integer)data[0]));
-        bl.setBalance(((double)data[1]));
+        bl.setBalance(((Double)data[1]));
 		return bl;
 	}
 

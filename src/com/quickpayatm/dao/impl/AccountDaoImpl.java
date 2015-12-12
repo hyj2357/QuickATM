@@ -14,8 +14,7 @@ import com.quickpayatm.domain.Account;
 
 public class AccountDaoImpl  extends HibernateDaoSupport  implements AccountDao{
 
-	@Override
-	public boolean update(Account account) {
+	public boolean update(final Account account) {
 		this.getHibernateTemplate().execute(
 				new HibernateCallback() {
 
@@ -34,14 +33,12 @@ public class AccountDaoImpl  extends HibernateDaoSupport  implements AccountDao{
 		return true;
 	}
 
-	@Override
 	public int findByAccount(String account) {
 	    List ls = null;
 	    ls = this.getSession().getNamedQuery("findByAccount_query").setString(0, account).list();
 		return (ls!=null)||(ls.size()!=0)?((Integer)((Object[])ls.get(0))[0]).intValue():-1;
 	}
 
-	@Override
 	public String findByAccountAndPassword(String account,String password) {
 	    List ls = null;
 	    ls = this.getSession().getNamedQuery("findByAccountAndPassword_query").setString(0,account).setString(1, password).list();
