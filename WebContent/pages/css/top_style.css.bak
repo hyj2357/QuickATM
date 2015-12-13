@@ -39,6 +39,7 @@ body{
 }
 
 .topButton{
+  cursor:pointer;
   position: absolute;
   z-index:3;
   border-color:#FF9900;
@@ -54,7 +55,23 @@ body{
   margin-top: 30px;
 }
 
+.submitButton{
+  cursor:pointer;
+  z-index:3;
+  border-color:#FF9900;
+  border-width:2px;
+  border-radius:28px;
+  border-style:solid;
+  background-color:transparent;
+  color:#FF9900;
+  width:200px;
+  height:100px;
+  font-family:SHSCN-Bold;
+  font-size:28px;
+}
+
 .buttonText{
+  cursor:pointer;
   font-family:SHSCN-Bold;
   left: 50px;
   top: 30px;

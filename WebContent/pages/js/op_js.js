@@ -6,3 +6,11 @@
 	 	 $this.css("background-color","#CCCCCC");
 		 $this.css("border-color","#FFFFFF #CCCCCC #FFFFFF #CCCCCC");
 	 }
+	 function submit_changeButtonStatusMouseOver(){
+         $(".submitButton").css("color","#FFFFFF");
+         $(".submitButton").css("background-color","#FF9900");
+	 }
+     function submit_changeButtonStatusMouseOut(){
+		 $(".submitButton").css("color","#FF9900");
+         $(".submitButton").css("background-color","");
+	 }

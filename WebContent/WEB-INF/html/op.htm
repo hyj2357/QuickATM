@@ -40,47 +40,31 @@
 	  </div>
    </div>  
    <div class="content">
-      <div style="left: 25%;position: absolute;top:20%;">
-          <form>
-	          <div class="inputGroup" style="right:0%;">
-	            <label>	  
-	               <span class="inputLabel" style="font-size:36px;">
-	                  <strong>原密码</strong>	  
-	               </span>
-	            </label>&nbsp;&nbsp;&nbsp;
-                <input class="inputTxt"  type="text" placeholder="请输入原密码"/><br/><br/><br/>
-	          </div>
-			  <div class="inputGroup" style="right:0%;">
-	            <label>	  
-	               <span class="inputLabel" style="font-size:36px;">
-	                  <strong>新密码</strong>	  
-	               </span>
-	            </label>&nbsp;&nbsp;&nbsp;
-                <input class="inputTxt"  type="text" placeholder="请输入新密码"/><br/><br/><br/>
-	          </div>
-			  <div>
-	            <input class="submitButton" type="submit" value="确定" onmouseout="submit_changeButtonStatusMouseOut()" onmousemove="submit_changeButtonStatusMouseOver()">
-	          </div>
-	      </form>
-      </div>
-      <br/><br/>
-     </div>
+      <span class="contentText" style="opacity:1;">
+         <strong>
+	        欢迎使用<span style="color:#FF9900;font-size:56px;display:inline;">QuickPay&ATM</span>
+	     </strong><br/><br/><br/>
+         <strong>
+	        你可以在左边面板选择各类ATM操作，取卡退出请点击页面<br/>
+            顶部的退出条图标.
+	     </strong><br/><br/><br/>
+	  </span>
    </div>
    <div class="op_border">
       <div class="op_border_div" style="border-color:#FF9900 #FF9900 #FFFFFF #FF9900;margin-top:0px;background-color:#FF9900;color:#000000;">
 	     <strong>操作</strong>
 	  </div>
-      <div class="op_border_div"   onclick="window.location.href='op.htm'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='op.htm'" style="background-color:#FFFFFF;border-color:#FFFFFF #FF9900 #FFFFFF #FFFFFF;">
 	    <span>
 	     首页
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='op_deposit.htm'" onclick="window.location.href='op_modifyPassword.htm'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='op_deposit.htm'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     存款
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='op_draw.htm'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"   onclick="window.location.href='op_draw.htm'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     取款
 		</span>
@@ -95,7 +79,7 @@
 	      转账
 		</span>
 	  </div>
-      <div class="op_border_div"  style="background-color:#FFFFFF;border-color:#FFFFFF #FF9900 #FFFFFF #FFFFFF;">
+      <div class="op_border_div"  onclick="window.location.href='op_modifyPassword.htm'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     修改密码
 		</span>

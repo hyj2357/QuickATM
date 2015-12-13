@@ -10,7 +10,7 @@
 
     <include file="struts-part1.xml"/>
 	
-    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.devMode" value="false"/>
     
     <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
     
@@ -22,6 +22,7 @@
        <action name="DrawFromAccount" class="DrawFromAccount">
        </action>
        <action name="Login" class="Login">
+          <result name="success">/WEB-INF/jsp/op.htm</result>
        </action>
        <action name="ModifyPassword" class="ModifyPassword">
        </action>
@@ -29,6 +30,8 @@
        </action>
 <!-- WEB-INF下界面转发Action -->
        <action name="pfs" class="pfs">
+           <result name="/WEB-INF/jsp/top.htm">/WEB-INF/jsp/top.htm</result>
+           <result name="/WEB-INF/jsp/login.htm">/WEB-INF/jsp/login.htm</result>           
        </action>
        
     </package>
