@@ -24,6 +24,7 @@ public class AccountServiceImpl implements AccountService{
 		if(balance.getBalance()<Double.parseDouble(amount))			
 		  return false;
 		balance.setBalance(balance.getBalance()-Double.parseDouble(amount));
+		this.balanceDao.update(balance);
         return true;
 	}
 

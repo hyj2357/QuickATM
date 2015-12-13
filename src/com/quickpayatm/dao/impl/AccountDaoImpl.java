@@ -36,13 +36,13 @@ public class AccountDaoImpl  extends HibernateDaoSupport  implements AccountDao{
 	public int findByAccount(String account) {
 	    List ls = null;
 	    ls = this.getSession().getNamedQuery("findByAccount_query").setString(0, account).list();
-		return (ls!=null)||(ls.size()!=0)?((Integer)((Object[])ls.get(0))[0]).intValue():-1;
+		return (ls.size()!=0)?((Integer)ls.get(0)).intValue():-1;
 	}
 
 	public String findByAccountAndPassword(String account,String password) {
 	    List ls = null;
 	    ls = this.getSession().getNamedQuery("findByAccountAndPassword_query").setString(0,account).setString(1, password).list();
-		return (ls.size()!=0)?((String)((Object[])ls.get(0))[0]):null;
+		return (ls.size()!=0)?account:null;
 	}
     
 }

@@ -15,23 +15,50 @@
     <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
     
     <package name="scuthnweb" extends="struts-default" namespace="/">
+      <interceptors>
+       <interceptor name="AuthorityIntercept" class="com.quickpayatm.action.authority.AccountLoginInterceptor"/>                                 
+       <!-- 拦截器栈配置 -->
+       <interceptor-stack name="AuthorityInterceptStack">
+          <interceptor-ref name="AuthorityIntercept"/>
+          <interceptor-ref name="defaultStack"/>
+       </interceptor-stack>
+     </interceptors>
+       
+          
        <action name="CheckAccountBalance" class="CheckAccountBalance">
        </action>
        <action name="DepositToAccount" class="DepositToAccount">
+          <result name="success">/WEB-INF/jsp/op.htm</result>
+          <result name="error">/WEB-INF/jsp/op.htm</result>
        </action>
        <action name="DrawFromAccount" class="DrawFromAccount">
+          <result name="success">/WEB-INF/jsp/op.htm</result>
+          <result name="error">/WEB-INF/jsp/op.htm</result>
        </action>
        <action name="Login" class="Login">
           <result name="success">/WEB-INF/jsp/op.htm</result>
+          <result name="error">/WEB-INF/jsp/login.htm</result>
        </action>
        <action name="ModifyPassword" class="ModifyPassword">
        </action>
        <action name="TransferAccount" class="TransferAccount">
        </action>
+       <action name="LoginOut" class="LoginOut">
+          <result name="success">/WEB-INF/jsp/login.htm</result>
+       </action>
 <!-- WEB-INF下界面转发Action -->
        <action name="pfs" class="pfs">
            <result name="/WEB-INF/jsp/top.htm">/WEB-INF/jsp/top.htm</result>
            <result name="/WEB-INF/jsp/login.htm">/WEB-INF/jsp/login.htm</result>           
+       </action>      
+       <action name="pfs_s" class="pfs_s">  
+           <result name="/WEB-INF/jsp/op_checkBalance.jsp">/WEB-INF/jsp/op_checkBalance.jsp</result>
+           <result name="/WEB-INF/jsp/op_deposit.htm">/WEB-INF/jsp/op_deposit.htm</result>
+           <result name="/WEB-INF/jsp/op_draw.htm">/WEB-INF/jsp/op_draw.htm</result>
+           <result name="/WEB-INF/jsp/op_modifyPassword.htm">/WEB-INF/jsp/op_modifyPassword.htm</result>
+           <result name="/WEB-INF/jsp/op_transfer.htm">/WEB-INF/jsp/op_transfer.htm</result>           
+           <result name="/WEB-INF/jsp/op.htm">/WEB-INF/jsp/op.htm</result> 
+           <result name="error">/WEB-INF/jsp/login.htm</result>
        </action>
        
     </package>

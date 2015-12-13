@@ -10,7 +10,7 @@ public class LoginAction extends ActionSupport{
 	
 	public String execute(){
 		ActionContext ctx = ActionContext.getContext();
-        if(this.accountService.login(account, password))
+        if(!this.accountService.login(account, password))
         	return ERROR;
         else{
         	ctx.getSession().put("account",account);

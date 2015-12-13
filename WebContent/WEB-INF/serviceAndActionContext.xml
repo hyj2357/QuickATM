@@ -25,10 +25,12 @@
     <bean id="DrawFromAccount" class="com.quickpayatm.action.atmmodule.DrawFromAccountAction"  parent="atmModuleTemplate"/>    	
     <bean id="Login" class="com.quickpayatm.action.atmmodule.LoginAction"  parent="atmModuleTemplate"/>    	
     <bean id="ModifyPassword" class="com.quickpayatm.action.atmmodule.ModifyPasswordAction"  parent="atmModuleTemplate"/>    	
-    <bean id="TransferAccount" class="com.quickpayatm.action.atmmodule.TransferAccountAction"  parent="atmModuleTemplate"/>    	  
+    <bean id="TransferAccount" class="com.quickpayatm.action.atmmodule.TransferAccountAction"  parent="atmModuleTemplate"/> 
+    <bean id="LoginOut" class="com.quickpayatm.action.atmmodule.LoginOutAction"  parent="atmModuleTemplate"/>        	  
 <!-- 页面转发相关配置 -->
 
     <bean id="pfs" class="com.quickpayatm.action.authority.PageForwardServlet" scope="prototype"/> 
+    <bean id="pfs_s" class="com.quickpayatm.action.authority.PageForwardServlet_Authority" scope="prototype"/> 
 
 <!-- end 页面转发相关配置 --> 	     
 </beans>
