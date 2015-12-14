@@ -39,6 +39,8 @@ public class AccountServiceImpl implements AccountService{
 		Balance balance_t = this.balanceDao.findById(j);
 		balance.setBalance(balance.getBalance()-Double.parseDouble(amount));
 		balance_t.setBalance(balance_t.getBalance()+Double.parseDouble(amount));
+		this.balanceDao.update(balance);
+		this.balanceDao.update(balance_t);
 		return true;
 	}
 
@@ -50,13 +52,13 @@ public class AccountServiceImpl implements AccountService{
 
 	public boolean modifyPassword(String account, String password, String newPassword, String confirmPassword) {
 		int id = this.accountDao.findByAccount(account);
-		String account_f = this.accountDao.findByAccountAndPassword(account, confirmPassword);
+		String account_f = this.accountDao.findByAccountAndPassword(account, password);
 		if(account_f==null||(!account_f.equals(account)))
 			return false;
 		Account ac = new Account();
 		ac.setId(id);
 		ac.setAccount(account);
-		ac.setPassword(confirmPassword);
+		ac.setPassword(newPassword);
 		this.accountDao.update(ac);			
 		return true;
 	}

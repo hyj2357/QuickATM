@@ -11,6 +11,7 @@ public class CheckAccountBalanceAction extends ActionSupport{
     	ActionContext ctx = ActionContext.getContext();
     	String account = (String)ctx.getSession().get("account");
     	double balance = this.accountService.checkAccountBalance(account).getBalance();
+    	ctx.getSession().put("balance", balance);
     	return SUCCESS;
     }
 

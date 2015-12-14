@@ -23,9 +23,9 @@
           <interceptor-ref name="defaultStack"/>
        </interceptor-stack>
      </interceptors>
-       
-          
+                 
        <action name="CheckAccountBalance" class="CheckAccountBalance">
+          <result name="success">/WEB-INF/jsp/op_checkBalance.jsp</result>
        </action>
        <action name="DepositToAccount" class="DepositToAccount">
           <result name="success">/WEB-INF/jsp/op.htm</result>
@@ -40,8 +40,12 @@
           <result name="error">/WEB-INF/jsp/login.htm</result>
        </action>
        <action name="ModifyPassword" class="ModifyPassword">
+          <result name="success">/WEB-INF/jsp/op.htm</result>
+          <result name="error">/WEB-INF/jsp/op.htm</result>          
        </action>
        <action name="TransferAccount" class="TransferAccount">
+          <result name="success">/WEB-INF/jsp/op.htm</result>
+          <result name="error">/WEB-INF/jsp/op.htm</result>          
        </action>
        <action name="LoginOut" class="LoginOut">
           <result name="success">/WEB-INF/jsp/login.htm</result>
@@ -52,7 +56,6 @@
            <result name="/WEB-INF/jsp/login.htm">/WEB-INF/jsp/login.htm</result>           
        </action>      
        <action name="pfs_s" class="pfs_s">  
-           <result name="/WEB-INF/jsp/op_checkBalance.jsp">/WEB-INF/jsp/op_checkBalance.jsp</result>
            <result name="/WEB-INF/jsp/op_deposit.htm">/WEB-INF/jsp/op_deposit.htm</result>
            <result name="/WEB-INF/jsp/op_draw.htm">/WEB-INF/jsp/op_draw.htm</result>
            <result name="/WEB-INF/jsp/op_modifyPassword.htm">/WEB-INF/jsp/op_modifyPassword.htm</result>
