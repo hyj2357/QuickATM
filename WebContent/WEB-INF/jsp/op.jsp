@@ -40,10 +40,10 @@
        }
     %>
    <div style="z-index:4;position:fixed;top:3.5%;width:100%;">
-      <a href="http://localhost:8080/QuickATM/LoginOut">                                    <!--  href -->
+      <a href="http://139.129.24.81:10566/QuickATM/LoginOut">                                    <!--  href -->
          <img style="cursor:pointer;position:relative;top:5%;" src="pages/image/prev.png"/>
 	  </a>
-	  <a href="http://localhost:8080/QuickATM/LoginOut">                                    <!--  href -->
+	  <a href="http://139.129.24.81:10566/QuickATM/LoginOut">                                    <!--  href -->
 	     <label style="cursor:pointer;color:rgba(255,255,255,0.6);font-family:SHSCN-Bold;font-size:28px;margin-top:5px">取卡退出</label>
 	  </a>
 	  <div style="top: 5px;position: fixed;right: 10%;">
@@ -67,32 +67,32 @@
       <div class="op_border_div" style="border-color:#FF9900 #FF9900 #FFFFFF #FF9900;margin-top:0px;background-color:#FF9900;color:#000000;">
 	     <strong>操作</strong>
 	  </div>
-      <div class="op_border_div"   onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op.jsp'" style="background-color:#FFFFFF;border-color:#FFFFFF #FF9900 #FFFFFF #FFFFFF;">
+      <div class="op_border_div"   onclick="window.location.href='http://139.129.24.81:10566/QuickATM/pfs_s?p=op.jsp'" style="background-color:#FFFFFF;border-color:#FFFFFF #FF9900 #FFFFFF #FFFFFF;">
 	    <span>
 	     首页
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_deposit.jsp'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='http://139.129.24.81:10566/QuickATM/pfs_s?p=op_deposit.jsp'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	    存款
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_deposit.jsp'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='http://139.129.24.81:10566/QuickATM/pfs_s?p=op_deposit.jsp'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     取款
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/CheckAccountBalance'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='http://139.129.24.81:10566/QuickATM/CheckAccountBalance'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	    查询账户余额
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_transfer.jsp'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='http://139.129.24.81:10566/QuickATM/pfs_s?p=op_transfer.jsp'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	      转账
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_modifyPassword.jsp'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='http://139.129.24.81:10566/QuickATM/pfs_s?p=op_modifyPassword.jsp'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     修改密码
 		</span>

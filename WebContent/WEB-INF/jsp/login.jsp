@@ -50,10 +50,10 @@
        }
     %>
    <div style="z-index:4;position:fixed;top:3.5%;width:100%;">
-      <a href="http://localhost:8080/QuickATM/pfs?pagePath=top.jsp">
+      <a href="http://139.129.24.81:10566/QuickATM/pfs?pagePath=top.jsp">
          <img style="cursor:pointer;position:relative;top:5%;" src="pages/image/prev.png"/>
 	  </a>
-	  <a href="http://localhost:8080/QuickATM/pfs?pagePath=top.jsp">
+	  <a href="http://139.129.24.81:10566/QuickATM/pfs?pagePath=top.jsp">
 	     <label style="cursor:pointer;color:rgba(255,255,255,0.6);font-family:SHSCN-Bold;font-size:28px;margin-top:5px">返回主页</label>
 	  </a>
 	  <div style="cursor:pointer;top: 5px;position: fixed;right: 10%;">
@@ -67,7 +67,7 @@
    </div>
 	
   <div style="left: 50%;position: absolute;top: 50%;top:40%;">
-    <form action="http://localhost:8080/QuickATM/Login" method="post">
+    <form action="http://139.129.24.81:10566/QuickATM/Login" method="post">
 	  <div class="inputGroup">
 	     <label>	  
 	        <span class="inputLabel">
