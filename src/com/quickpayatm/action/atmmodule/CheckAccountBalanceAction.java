@@ -4,7 +4,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.quickpayatm.service.AccountService;
 
-public class CheckAccountBalanceAction extends ActionSupport{
+public class CheckAccountBalanceAction extends ActionSupport implements AuthValidate{
     private AccountService accountService;
     
     public String execute(){
@@ -22,11 +22,11 @@ public class CheckAccountBalanceAction extends ActionSupport{
     	return SUCCESS;
     }
     
-    private boolean auth(ActionContext ctx){
+    public boolean auth(ActionContext ctx){
     	return (ctx.getSession().get("account")!=null);
     }
     
-    private String self_validate(){
+    public String self_validate(){
     	return null;
     }
     
