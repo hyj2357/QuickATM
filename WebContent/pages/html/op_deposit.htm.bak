@@ -26,6 +26,11 @@
   <div class="top">
    <div class="blackPurdah" style="height:15%;position:fixed;">
    </div>
+   <div class="blackPurdah" style="height:15%;position:fixed;top:15%;">
+     <span style="font-size:24px;font-color:#000000;">
+       <strong>I am here!!!</strong>
+	 <span>
+   </div>
    <div style="z-index:4;position:fixed;top:3.5%;width:100%;">
       <a href="login.htm">
          <img style="cursor:pointer;position:relative;top:5%;" src="../image/prev.png"/>
@@ -40,9 +45,9 @@
 	  </div>
    </div>  
    <div class="content">
-      <div style="left: 50%;position: absolute;top:30%;">
+      <div style="left: 20%;position: absolute;top:30%;">
           <form>
-	          <div class="inputGroup">
+	          <div class="inputGroup" style="right:0%;">
 	            <label>	  
 	               <span class="inputLabel" style="font-size:36px;">
 	                  <strong>´æ¿îÊý¶î</strong>	  
