@@ -9,12 +9,27 @@ public class CheckAccountBalanceAction extends ActionSupport{
     
     public String execute(){
     	ActionContext ctx = ActionContext.getContext();
+    	if(!this.auth(ctx))
+    		return ERROR;
+    	String i = "";
+    	if((i=this.self_validate())!=null){
+    		ctx.getSession().put("errMsg", i);
+    		return "verror";
+    	}
     	String account = (String)ctx.getSession().get("account");
     	double balance = this.accountService.checkAccountBalance(account).getBalance();
     	ctx.getSession().put("balance", balance);
     	return SUCCESS;
     }
-
+    
+    private boolean auth(ActionContext ctx){
+    	return (ctx.getSession().get("account")!=null);
+    }
+    
+    private String self_validate(){
+    	return null;
+    }
+    
 	public AccountService getAccountService() {
 		return accountService;
 	}
