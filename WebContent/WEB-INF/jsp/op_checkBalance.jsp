@@ -70,17 +70,17 @@
       <div class="op_border_div" style="border-color:#FF9900 #FF9900 #FFFFFF #FF9900;margin-top:0px;background-color:#FF9900;color:#000000;">
 	     <strong>操作</strong>
 	  </div>
-      <div class="op_border_div"   onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op.htm'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"   onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op.jsp'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     首页
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_deposit.htm'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_deposit.jsp'" onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     存款
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_draw.htm'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_draw.jsp'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     取款
 		</span>
@@ -90,12 +90,12 @@
 	     查询账户余额
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_transfer.htm'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_transfer.jsp'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	      转账
 		</span>
 	  </div>
-      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_modifyPassword.htm'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
+      <div class="op_border_div"  onclick="window.location.href='http://localhost:8080/QuickATM/pfs_s?p=op_modifyPassword.jsp'"  onmouseout="cgOpBorderDivMouseOut($(this))" onmousemove="cgOpBorderDivMouseOver($(this))">
 	    <span>
 	     修改密码
 		</span>

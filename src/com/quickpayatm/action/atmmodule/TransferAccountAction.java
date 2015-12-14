@@ -23,8 +23,10 @@ public class TransferAccountAction extends ActionSupport implements AuthValidate
         String account = (String)ctx.getSession().get("account");
         if(this.accountService.transferAccount(account, targetAccount, amount))
         	return SUCCESS;
-        else
+        else{
+        	ctx.getSession().put("errMsg", "由于目标账户不存在或者转账金额超出本账户余额,转账失败.");
         	return ERROR;
+        }
     }
     
 	public AccountService getAccountService() {

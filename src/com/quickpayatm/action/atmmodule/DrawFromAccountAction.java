@@ -22,8 +22,10 @@ public class DrawFromAccountAction extends ActionSupport implements AuthValidate
 		String account = (String)ctx.getSession().get("account");
 		if(this.accountService.drawFromAccount(account, amount))
 			return SUCCESS;
-		else
+		else{
+			ctx.getSession().put("errMsg", "取款金额超出账户余额或其他原因,取款失败,请重试!");
 			return ERROR;
+		}
 	}
 	
 	public AccountService getAccountService() {

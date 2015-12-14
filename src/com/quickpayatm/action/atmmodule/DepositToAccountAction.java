@@ -22,8 +22,10 @@ public class DepositToAccountAction extends ActionSupport implements AuthValidat
     	 }
     	 if(this.accountService.depositToAccount(account, amount))
     	   return SUCCESS;
-    	 else
+    	 else{
+    	   ctx.getSession().put("errMsg", "存款失败,请重试!");
     	   return ERROR;
+    	 }
      }
 
 	public AccountService getAccountService() {

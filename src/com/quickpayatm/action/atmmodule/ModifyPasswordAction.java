@@ -22,8 +22,10 @@ public class ModifyPasswordAction extends ActionSupport implements AuthValidate{
    		    return "verror";
    	    }
         String account = (String)ctx.getSession().get("account");
-        if(this.accountService.modifyPassword(account, password, newPassword, confirmPassword))
+        if(this.accountService.modifyPassword(account, password, newPassword, confirmPassword)){
+        	ctx.getSession().put("errMsg", "由于原密码错误或其他原因,修改密码失败.");
         	return ERROR;
+        }
         else
         	return SUCCESS;
     }

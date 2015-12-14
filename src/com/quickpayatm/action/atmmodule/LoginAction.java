@@ -17,8 +17,10 @@ public class LoginAction extends ActionSupport implements AuthValidate{
    		     ctx.getSession().put("errMsg", i);
    		     return "verror";
    	    }	
-        if(!this.accountService.login(account, password))
+        if(!this.accountService.login(account, password)){
+        	ctx.getSession().put("errMsg", "卡号或密码错误.");
         	return ERROR;
+        }
         else{
         	ctx.getSession().put("account",account);
             return SUCCESS;

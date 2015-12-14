@@ -8,6 +8,7 @@
   <link href="pages/css/top_style.css" rel="stylesheet">
   <link href="pages/css/bootstrap.min.css" rel="stylesheet">
   <link href="pages/css/login_style.css" rel="stylesheet">
+  <link href="pages/css/font.css" rel="stylesheet">  
   <script src="pages/js/jquery-2.1.4.min.js"></script>
 </head>
 
@@ -37,22 +38,22 @@
    <div class="blackPurdah" style="height:15%;position:fixed;">
    </div>
    <%
-       String e = (String)session.getAttribute("verror");
+       String e = (String)session.getAttribute("errMsg");
        if(e!=null){
     	   out.print(   
     	    "<div class=\"blackPurdah\" style=\"height:10%;position:fixed;top:16%;\">"
-    	   +"<span style=\"font-size:36px;color:#FF9900;padding-left:30%\">"
+    	   +"<span style=\"font-family:SHSCN-Bold;font-size:36px;color:#FF9900;padding-left:40%\">"
     	   +"<strong>"+e+"</strong>"
     	   +"<span>"
            +"</div>");
-    	   session.removeAttribute("verror");
+    	   session.removeAttribute("errMsg");
        }
     %>
    <div style="z-index:4;position:fixed;top:3.5%;width:100%;">
-      <a href="http://localhost:8080/QuickATM/pfs?pagePath=top.htm">
+      <a href="http://localhost:8080/QuickATM/pfs?pagePath=top.jsp">
          <img style="cursor:pointer;position:relative;top:5%;" src="pages/image/prev.png"/>
 	  </a>
-	  <a href="http://localhost:8080/QuickATM/pfs?pagePath=top.htm">
+	  <a href="http://localhost:8080/QuickATM/pfs?pagePath=top.jsp">
 	     <label style="cursor:pointer;color:rgba(255,255,255,0.6);font-family:SHSCN-Bold;font-size:28px;margin-top:5px">返回主页</label>
 	  </a>
 	  <div style="cursor:pointer;top: 5px;position: fixed;right: 10%;">

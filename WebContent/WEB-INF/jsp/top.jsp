@@ -27,7 +27,7 @@
 	<div class="name">
 	       <strong>QuickPay&ATM</strong>
 	</div>
-	<div class="topButton" align="center" onclick="window.location.href='http://localhost:8080/QuickATM/pfs?pagePath=login.htm'" onmouseout="changeButtonStatusMouseOut()" onmousemove="changeButtonStatusMouseOver()">
+	<div class="topButton" align="center" onclick="window.location.href='http://localhost:8080/QuickATM/pfs?pagePath=login.jsp'" onmouseout="changeButtonStatusMouseOut()" onmousemove="changeButtonStatusMouseOver()">
 	  <span class="buttonText">
 	      <strong>点击进入</strong>	  
 	  </span>
